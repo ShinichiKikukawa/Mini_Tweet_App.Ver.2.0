@@ -4,8 +4,10 @@
     <!-- ユーザーを一覧表示するためのeach文を追加しましょう -->
     <% @users.each do |user| %>
       <div class="users-index-item">
-        <div class="user-right">
-          <!-- ユーザー名を表示しましょう -->
+        <div class="user-left">
+          <%= image_tag "/user_images/#{user.image}" %>
+          </div>
+          <div class="user-right">
           <%= link_to user.name, user_path(user.id) %>
         </div>
       </div>
